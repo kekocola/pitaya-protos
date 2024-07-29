@@ -1,8 +1,7 @@
 syntax = "proto3";
 
 package protos;
-option csharp_namespace = "NPitaya.Protos";
-option go_package = "github.com/topfreegames/pitaya/pkg/protos";
+option go_package = "/protos";
 
 import "request.proto";
 import "response.proto";
@@ -13,6 +12,7 @@ import "kick.proto";
 service Pitaya {
   rpc Call(Request) returns (Response) {}
   rpc PushToUser(Push) returns (Response) {}
+  rpc PushToUsers(MultiPush) returns (Response) {}
   rpc SessionBindRemote(BindMsg) returns (Response) {}
   rpc KickUser(KickMsg) returns (KickAnswer) {}
 }

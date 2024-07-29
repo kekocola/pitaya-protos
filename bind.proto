@@ -1,8 +1,7 @@
 syntax = "proto3";
 
 package protos;
-option csharp_namespace = "NPitaya.Protos";
-option go_package = "github.com/topfreegames/pitaya/pkg/protos";
+option go_package = "/protos";
 
 message BindMsg {
   string uid = 1;
